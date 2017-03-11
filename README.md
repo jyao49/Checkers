@@ -1,3 +1,3 @@
 # Checkers
 
-Basic player vs. player checkers
+Player vs. player checkers
