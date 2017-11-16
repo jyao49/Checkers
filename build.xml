@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<project name="checkers" default="run" basedir=".">
+
+    <property name="src.dir" location="src"/>
+    <property name="build.dir" location="build"/>
+    <property name="classes.dir" location="${build.dir}/classes"/>
+    <property name="jar.dir" location="${build.dir}/jar"/>
+    <property name="main-class"  value="fxapp.Main"/>
+
+    <target name="build">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${classes.dir}"/>
+    </target>
+
+    <target name="compile" depends="build">
+        <javac srcdir="${src.dir}" destdir="${classes.dir}">
+    	</javac>
+    </target>
+
+    <target name="jar" depends="compile">
+        <mkdir dir="${jar.dir}"/>
+        <jar destfile="${jar.dir}/${ant.project.name}.jar" >
+            <fileset dir="${classes.dir}"/>
+            <manifest>
+                <attribute name="Main-Class" value="${main-class}"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run" depends="jar">
+        <java jar="${jar.dir}/${ant.project.name}.jar" fork="true"/>
+    </target>
+
+    <target name="clean">
+        <delete dir="${build.dir}" />
+    </target>
+
+</project>
