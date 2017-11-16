@@ -22,4 +22,4 @@ ant
 
 ## Currently Supported Modes:
 
-Player vs. player checkers
+Local Player vs. Player
