@@ -22,4 +22,4 @@ ant
 
 ## Currently Supported Modes:
 
-Local Player vs. Player
+Player vs. Player (local)
