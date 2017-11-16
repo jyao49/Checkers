@@ -2,7 +2,7 @@
 
 Implementation of the board game checkers in Java.
 
-This project is built with [Apache Ant](http://ant.apache.org/).
+This project is built with [Apache Ant](http://ant.apache.org/). All commands should be run in the home directory of this repository.
 
 
 To build an executable jar, use the command:
